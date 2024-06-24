@@ -1,6 +1,6 @@
 import React from "react";
 import AppLayout from "../components/layout/AppLayout";
-import { Box, Typography, hexToRgb } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const Home = () => {
     return (
