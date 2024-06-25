@@ -6,6 +6,7 @@ import ChatList from "../specific/ChatList";
 import { sampleChats } from "../constants/sampleData";
 import { useParams } from "react-router-dom";
 import Profile from "../specific/Profile";
+import { bgGradient } from "../constants/color";
 
 const AppLayout = () => (WrappedComponent) => {
     return (props) => {
@@ -27,7 +28,7 @@ const AppLayout = () => (WrappedComponent) => {
                         md={3}
                         sx={{
                             display: { xs: "none", sm: "block" },
-                            bgcolor: "rgba(250,240,230)",
+                            backgroundImage: bgGradient,
                         }}
                         height={"100%"}
                     >
