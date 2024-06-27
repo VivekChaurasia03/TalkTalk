@@ -2,7 +2,7 @@ import React from "react";
 import { transformImage } from "../../lib/Features";
 import { FileOpen as FileOpenIcon } from "@mui/icons-material";
 
-const RenderAttachment = (file, url) => {
+const RenderAttachment = (file, url, width = "200px", height = "150px") => {
     switch (file) {
         case "video":
             return <video src={url} preload="none" width={"200px"} controls />;
@@ -14,8 +14,8 @@ const RenderAttachment = (file, url) => {
                 <img
                     src={transformImage(url, 200)}
                     alt="Attachment"
-                    width={"200px"}
-                    height={"150px"}
+                    width={width}
+                    height={height}
                     style={{
                         objectFit: "contain",
                     }}

@@ -3,6 +3,7 @@ import {
     Backdrop,
     Box,
     IconButton,
+    Stack,
     Toolbar,
     Tooltip,
     Typography,
@@ -15,6 +16,7 @@ import {
     Group as GroupIcon,
     Notifications as NotificationsIcon,
     Logout as LogoutIcon,
+    QuestionAnswer as QuestionAnswerIcon,
 } from "@mui/icons-material";
 import { Suspense, useState, lazy } from "react";
 import { orange } from "../constants/color";
@@ -59,12 +61,20 @@ const Header = () => {
                     }}
                 >
                     <Toolbar>
-                        <Typography
-                            variant="h6"
-                            sx={{ display: { xs: "none", sm: "block" } }}
-                        >
-                            TalkTalk
-                        </Typography>
+                        <Stack direction={"row"} spacing={"0.5rem"}>
+                            <QuestionAnswerIcon
+                                sx={{
+                                    paddingTop: "0.5rem",
+                                    fontSize: "2rem",
+                                }}
+                            />
+                            <Typography
+                                variant="h6"
+                                sx={{ display: { xs: "none", sm: "block" } }}
+                            >
+                                TalkTalk
+                            </Typography>
+                        </Stack>
                         <Box sx={{ display: { xs: "block", sm: "none" } }}>
                             <IconButton color="inherit" onClick={handleMobile}>
                                 <MenuIcon />
